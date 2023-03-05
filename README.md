@@ -15,3 +15,11 @@ Django 4.1.7
 django-bootstrap4 22.3
 Pillow 9.4.0
 qrcode 7.4.2
+
+
+
+
+
+
+https://user-images.githubusercontent.com/43007654/222945343-f8771996-1ba9-4f77-9a42-6c853e45ced3.mp4
+
