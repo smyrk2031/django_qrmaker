@@ -29,9 +29,10 @@ By checking which button was pressed by ID, the Ajax operation to be executed is
 https://user-images.githubusercontent.com/43007654/222945343-f8771996-1ba9-4f77-9a42-6c853e45ced3.mp4
 
 
-
+<br><hr><hr>
 <h2>追加したい機能メモ</h2>
 <br>・表示されるQRコードのサイズを任意変更して、読み取りやすさを検証できるようにする
 <br>・QRコードの耐環境性能の指標チャートを表示（どれだけ弱いか）
 <br>・QRコードに対して汚れ・一部破損フィルタを適応する機能
 <br>・検索モードから、登録情報の編集を可能にする（元URLだけを変更してQRコードを使いまわせるようにする機能）
+<br><hr><hr>
