@@ -1,4 +1,4 @@
-###django_qrmaker###
+<h1>django_qrmaker</h1>
 <h3>description: english</h3>
 
 An application that converts any character string into a QR code. There is a UUID1 conversion function for strings and a database management function,
@@ -17,7 +17,7 @@ Pillow 9.4.0
 qrcode 7.4.2
 
 
-◆主な機能
+<h3 style="color=0011ff;">◆主な機能</h3>
 
 No1
 
