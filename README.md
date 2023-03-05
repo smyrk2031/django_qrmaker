@@ -17,7 +17,7 @@ Pillow 9.4.0
 qrcode 7.4.2
 
 
-<h3 style="color=0011ff;">◆主な機能</h3>
+<h3 style="color:red;">◆主な機能</h3>
 
 No1
 
