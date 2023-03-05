@@ -7,7 +7,7 @@ An application that converts any character string into a QR code. There is a UUI
 
 任意の文字列をQRコードに変換するアプリ。文字列のUUID1化機能とデータベース管理機能があります
 
-
+<hr>
 <h3>◆Application Env</h3>
 
 Python 3.9.10
@@ -16,7 +16,7 @@ django-bootstrap4 22.3
 Pillow 9.4.0
 qrcode 7.4.2
 
-
+<hr>
 <h3 style="color:red;">◆主な機能</h3>
 
 No1
@@ -26,6 +26,8 @@ No1
 ・QR code creation and registration use the same Form tag on HTML, and both buttons use jquery Ajax,
 By checking which button was pressed by ID, the Ajax operation to be executed is changed.
 
+<hr>
+<h2>Djangoアプリのイメージ動画</h2>
 https://user-images.githubusercontent.com/43007654/222945343-f8771996-1ba9-4f77-9a42-6c853e45ced3.mp4
 
 
