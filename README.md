@@ -1,14 +1,14 @@
-# django_qrmaker
-description: english
+###django_qrmaker###
+<h3>description: english</h3>
 
 An application that converts any character string into a QR code. There is a UUID1 conversion function for strings and a database management function,
 
-description: japanize
+<h3>description: japanize</h3>
 
 任意の文字列をQRコードに変換するアプリ。文字列のUUID1化機能とデータベース管理機能があります
 
 
-◆Application Env
+<h3>◆Application Env</h3>
 
 Python 3.9.10
 Django 4.1.7
