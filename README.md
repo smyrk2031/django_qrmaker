@@ -17,9 +17,14 @@ Pillow 9.4.0
 qrcode 7.4.2
 
 
+◆主な機能
 
+No1
 
-
+・QRコードの作成と登録は、HTML上の同一のFormタグを使っており、どちらのボタンもjqueryのAjaxを使っている為、
+　どちらのボタンが押されたのかをIDで確認して、実行するAjaxの動作を変化させている。
+・QR code creation and registration use the same Form tag on HTML, and both buttons use jquery Ajax,
+By checking which button was pressed by ID, the Ajax operation to be executed is changed.
 
 https://user-images.githubusercontent.com/43007654/222945343-f8771996-1ba9-4f77-9a42-6c853e45ced3.mp4
 
