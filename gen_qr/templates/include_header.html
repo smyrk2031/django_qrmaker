@@ -1,0 +1,45 @@
+{% load static %}
+<style>
+    .abtn{
+        display: block;
+        width: 100%;
+        /*height: 50px;*/
+        padding: 15px 0 0 100;
+        margin: auto;
+        background: #569f3c;
+        color: #FFF;
+        text-decoration: none;
+        text-align: center;
+    }
+    .abtn:hover{
+        background: #225f0d;
+    }
+    div.inline_block_result{
+        display: inline-block;
+        width: 20%;
+        vertical-align: top;
+        /*background-color: aquamarine;*/
+    }
+</style>
+
+<div class="header_line" style="background-color:rgb(234, 226, 83);">
+    <h1 style="color:blue;margin-left:1.8em;">MyQRアプリ</h1>
+</div>
+<div class="header_line_btn" style="background-color:rgb(234, 179, 83);text-align: center;">
+    <!--<button onclick="location.href='create' " class="modal-button">作成</button>
+    <button onclick="location.href='qrtable'" class="modal-button">検索</button>-->
+    <!--<button onclick="location.href='qrcamera'" class="modal-button">コード読取</button>-->
+    <!--<button onclick="location.href='dummy'">ダミーサイト表示</button>-->
+    <div class="inline_block_result">
+        <a href="{% url 'gen_qr:create' %}" class="abtn">作成</a>
+    </div>
+    <div class="inline_block_result">
+        <a href="{% url 'gen_qr:qrtable' %}" class="abtn">検索</a>
+    </div>
+    <div class="inline_block_result">
+        <a href="{% url 'gen_qr:qrcamera' %}" class="abtn">QRカメラ</a>
+    </div>
+    <div class="inline_block_result">
+        <a href="{% url 'gen_qr:dummy' %}" class="abtn">ダミーサイト表示</a>
+    </div>
+</div>

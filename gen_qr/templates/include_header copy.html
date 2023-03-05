@@ -1,0 +1,57 @@
+{% load static %}
+<div class="header_line" style="background-color:rgb(234, 226, 83);">
+    <h1 style="color:blue;margin-left:1.8em;">MyQRアプリ</h1>
+</div>
+<link rel="stylesheet" type="text/css" href="{% static '/css/21_modal.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static '/css/22_close_btn.css' %}">
+<style>
+    .inline_block_create{
+        display: inline-block;
+        width: 40%;
+        height: 50%;
+        background-color: aquamarine;
+    }
+</style>
+
+
+<button onclick="location.href='#modal-01' " class="modal-button">作成</button>
+<button onclick="location.href='#modal-02'" class="modal-button">検索</button>
+<button onclick="location.href='#modal-03'" class="modal-button">コード読取</button>
+<button onclick="location.href='dummy'">ダミーサイト表示</button>
+
+<div class="modal-wrapper" id="modal-01">
+    <a href="#!" class="modal-overlay"></a>
+    <div class="modal-window">
+        <div class="modal-content">
+            <p class="modal_title">QRコードの新規作成</p>
+            <!-- QRコード発行の設定区域 -->
+            <div class="inline_block_create">
+                <!--<form method="POST" id="ajax_create" action="{% url 'gen_qr:create' %}">-->
+                <form method="POST" id="ajax_create" action="">
+                    {% csrf_token %}
+                    <p>URLを入力してください。</p>
+                    <input type="text" id="get_url" placeholder="例: https://www"/>
+                    <br>
+                    <p>用途</p>
+                    <input type="text" id="get_usage"/>
+                    <!--<br>
+                    <p>オリジナル化</p><input type="text" id="get_original"/>-->
+                    <br>
+                    <p>メモ</p>
+                    <input type="text" id="get_explain" placeholder="具体的な説明書きを残してください"/>
+                    <br><hr>
+                    <button type="submit">QR発行</button>
+                </form>
+            </div>
+            <!-- QRコードの表示区域 -->
+            <div class="inline_block_create">
+                <span>絵</span>
+            </div>
+        </div>
+      <!-- モーダルを閉じるボタン -->
+      <a href="#!" class="modal-close"><i class="square_btn"></i></a>
+    </div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>試し</title>
+    <link rel="icon" type="image/png" href="{% static '/imgs/icon/icon2.png' %}">
+
+    <!-- モーダル表示 -->
+    <!--<link rel="stylesheet" type="text/css" href="{% static '/css/21_modal.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/22_close_btn.css' %}">-->
+
+    <style>
+        div.inline_block_create{
+            display: inline-block;
+            width: 40%;
+            height: 50%;
+            vertical-align: top;
+            /*background-color: aquamarine;*/
+        }
+        div.inline_block_result{
+            display: inline-block;
+            width: 40%;
+            height: 50%;
+            vertical-align: top;
+            /*background-color: aquamarine;*/
+        }
+    </style>
+</head>
+<body>
+    {% include "include_header.html" %}
+
+    <h1>Let's Dummy HP</h1>
+    
+</body>
+</html>

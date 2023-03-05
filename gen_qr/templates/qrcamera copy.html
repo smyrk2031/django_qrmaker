@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>試し</title>
+    <link rel="icon" type="image/png" href="{% static '/imgs/icon/icon2.png' %}">
+
+    <style>
+        div.inline_block_create{
+            display: inline-block;
+            width: 40%;
+            height: 50%;
+            vertical-align: top;
+            /*background-color: aquamarine;*/
+        }
+    </style>
+</head>
+<body>
+
+    {% include "include_header.html" %}
+
+    <!-- ◆ HTMLで簡単にカメラ起動できる -->
+    <!--<label for="upload">写真を撮影してアップロードする</label>
+    <input id="upload" type="file" name="image" accept="image/*" capture="camera">-->
+
+    <!-- ◆ javascriptでカメラ -->
+    <!-- カメラ映像が描画されます。 -->
+    <video id="video_area" style="background-color: #000" autoplay></video>
+
+    <!-- 押下するとカメラ映像描画を開始します。 -->
+    <button id="start_btn">映像表示開始</button>
+
+    <!-- 押下するとカメラ映像から静止画をキャプチャします。 -->
+    <button onclick="copyFrame()">静止画取得</button>
+
+    <!-- キャプチャした静止画が描画されます。 -->
+    <canvas id="capture_image"></canvas>
+
+</body>
+<script>
+    // getUserMedia が使えないときは、『getUserMedia()が利用できないブラウザです！』と言ってね。
+    if (typeof navigator.mediaDevices.getUserMedia !== 'function') {
+        const err = new Error('getUserMedia()が利用できないブラウザです！');
+        alert(`${err.name} ${err.message}`);
+        throw err;
+    }
+
+    // 操作する画面エレメント変数定義します。
+    const $start = document.getElementById('start_btn');   // スタートボタン
+    const $video = document.getElementById('video_area');  // 映像表示エリア
+
+    // 「スタートボタン」を押下したら、getUserMedia を使って映像を「映像表示エリア」に表示してね。
+    $start.addEventListener('click', () => {
+        navigator.mediaDevices.getUserMedia({ video: true, audio: false })
+        .then(stream => $video.srcObject = stream)
+        .catch(err => alert(`${err.name} ${err.message}`));
+    }, false);
+
+    // 「静止画取得」ボタンが押されたら「<canvas id="capture_image">」に映像のコマ画像を表示します。
+    function copyFrame() {
+        var canvas_capture_image = document.getElementById('capture_image');
+        var cci = canvas_capture_image.getContext('2d');
+        var va = document.getElementById('video_area');
+
+        canvas_capture_image.width  = va.videoWidth;
+        canvas_capture_image.height = va.videoHeight;
+        cci.drawImage(va, 0, 0);  // canvasに『「静止画取得」ボタン』押下時点の画像を描画。
+    }
+</script>
+
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+<!--<script type="text/javascript" src="{% static 'js/ajax.js' %}"></script>-->
+</html>
